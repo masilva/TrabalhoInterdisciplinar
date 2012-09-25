@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PSIModelStoreContainer" CdmEntityContainer="PSIEntities">
+    <EntitySetMapping Name="Hospital">
+      <EntityTypeMapping TypeName="PSIModel.Hospital">
+        <MappingFragment StoreEntitySet="Hospital">
+          <ScalarProperty Name="HospitalId" ColumnName="CodHosp" />
+          <ScalarProperty Name="NomHosp" ColumnName="NomHosp" />
+          <ScalarProperty Name="Ender" ColumnName="Ender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medico">
+      <EntityTypeMapping TypeName="PSIModel.Medico">
+        <MappingFragment StoreEntitySet="Medico">
+          <ScalarProperty Name="CodMed" ColumnName="CodMed" />
+          <ScalarProperty Name="NomMed" ColumnName="NomMed" />
+          <ScalarProperty Name="DcrEspec" ColumnName="DcrEspec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

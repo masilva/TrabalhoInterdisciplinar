@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PSIModel2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PSIEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hospital" EntityType="PSIModel2.Hospital" />
+  </EntityContainer>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="CodHosp" />
+    </Key>
+    <Property Name="CodHosp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomHosp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

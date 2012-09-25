@@ -1,0 +1,10 @@
+c:\users\eduardo\documents\visual studio 2010\Projects\TP_PSI\TP_PSI\bin\TP_PSI.dll
+c:\users\eduardo\documents\visual studio 2010\Projects\TP_PSI\TP_PSI\bin\TP_PSI.pdb
+c:\users\eduardo\documents\visual studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\ResolveAssemblyReference.cache
+c:\users\eduardo\documents\visual studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\TP_PSI.dll
+c:\users\eduardo\documents\visual studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\TP_PSI.pdb
+C:\Users\dsalomao\Documents\Visual Studio 2010\Projects\TP_PSI\TP_PSI\bin\TP_PSI.dll
+C:\Users\dsalomao\Documents\Visual Studio 2010\Projects\TP_PSI\TP_PSI\bin\TP_PSI.pdb
+C:\Users\dsalomao\Documents\Visual Studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dsalomao\Documents\Visual Studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\TP_PSI.dll
+C:\Users\dsalomao\Documents\Visual Studio 2010\Projects\TP_PSI\TP_PSI\obj\Debug\TP_PSI.pdb

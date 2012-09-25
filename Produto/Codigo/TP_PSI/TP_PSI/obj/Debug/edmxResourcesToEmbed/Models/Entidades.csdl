@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PSIModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PSIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hospital" EntityType="PSIModel.Hospital" />
+    <EntitySet Name="Medico" EntityType="PSIModel.Medico" />
+  </EntityContainer>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="HospitalId" />
+    </Key>
+    <Property Name="HospitalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomHosp" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Ender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Medico">
+    <Key>
+      <PropertyRef Name="CodMed" />
+    </Key>
+    <Property Name="CodMed" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomMed" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DcrEspec" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

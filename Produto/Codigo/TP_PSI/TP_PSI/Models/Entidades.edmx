@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PSIModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PSIModelStoreContainer">
+          <EntitySet Name="Hospital" EntityType="PSIModel.Store.Hospital" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Medico" EntityType="PSIModel.Store.Medico" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Hospital">
+          <Key>
+            <PropertyRef Name="CodHosp" />
+          </Key>
+          <Property Name="CodHosp" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NomHosp" Type="varchar" MaxLength="50" />
+          <Property Name="Ender" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="CodMed" />
+          </Key>
+          <Property Name="CodMed" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NomMed" Type="varchar" MaxLength="50" />
+          <Property Name="DcrEspec" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PSIModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PSIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hospital" EntityType="PSIModel.Hospital" />
+          <EntitySet Name="Medico" EntityType="PSIModel.Medico" />
+        </EntityContainer>
+        <EntityType Name="Hospital">
+          <Key>
+            <PropertyRef Name="HospitalId" />
+          </Key>
+          <Property Name="HospitalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomHosp" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Ender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="CodMed" />
+          </Key>
+          <Property Name="CodMed" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomMed" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DcrEspec" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PSIModelStoreContainer" CdmEntityContainer="PSIEntities">
+          <EntitySetMapping Name="Hospital"><EntityTypeMapping TypeName="PSIModel.Hospital"><MappingFragment StoreEntitySet="Hospital">
+            <ScalarProperty Name="HospitalId" ColumnName="CodHosp" />
+            <ScalarProperty Name="NomHosp" ColumnName="NomHosp" />
+            <ScalarProperty Name="Ender" ColumnName="Ender" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Medico"><EntityTypeMapping TypeName="PSIModel.Medico"><MappingFragment StoreEntitySet="Medico">
+            <ScalarProperty Name="CodMed" ColumnName="CodMed" />
+            <ScalarProperty Name="NomMed" ColumnName="NomMed" />
+            <ScalarProperty Name="DcrEspec" ColumnName="DcrEspec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Entidades">
+        <EntityTypeShape EntityType="PSIModel.Hospital" Width="1.5" PointX="0.75" PointY="0.625" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSIModel.Medico" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

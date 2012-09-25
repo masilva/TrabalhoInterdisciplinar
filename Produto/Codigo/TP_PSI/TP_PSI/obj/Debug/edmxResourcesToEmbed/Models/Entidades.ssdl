@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PSIModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PSIModelStoreContainer">
+    <EntitySet Name="Hospital" EntityType="PSIModel.Store.Hospital" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medico" EntityType="PSIModel.Store.Medico" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="CodHosp" />
+    </Key>
+    <Property Name="CodHosp" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NomHosp" Type="varchar" MaxLength="50" />
+    <Property Name="Ender" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Medico">
+    <Key>
+      <PropertyRef Name="CodMed" />
+    </Key>
+    <Property Name="CodMed" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NomMed" Type="varchar" MaxLength="50" />
+    <Property Name="DcrEspec" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PSIModel1StoreContainer" CdmEntityContainer="PSIEntities1">
+    <EntitySetMapping Name="Hospital">
+      <EntityTypeMapping TypeName="PSIModel1.Hospital">
+        <MappingFragment StoreEntitySet="Hospital">
+          <ScalarProperty Name="Ender" ColumnName="Ender" />
+          <ScalarProperty Name="CodHosp" ColumnName="CodHosp" />
+          <ScalarProperty Name="NomHosp" ColumnName="NomHosp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
